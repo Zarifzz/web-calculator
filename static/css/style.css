@@ -21,3 +21,23 @@
   .create-btn {
     width: 100%;
   }
+
+  /*  START OF ROOM.HTML CSS END OF HOME.HTML CSS */
+
+
+  .message_box{
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: wheat;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    align-items: stretch;
+  }
+
+
+
+
+
+  
