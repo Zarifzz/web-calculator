@@ -58,10 +58,24 @@ def room():
     if room is None or session.get("name") is None or room not in rooms:
         return redirect(url_for("home"))
     
-    
+
 
     return render_template("room.html")
 
+
+@socketio.on("connect")
+def connect(auth):
+    room = session.get("room")
+    name = session.get("name")
+
+    if not room or not name:
+        return 
+    if room not in rooms:
+        leave_room(room)
+        return 
+    
+    join_room(room)
+    
 
 
 
