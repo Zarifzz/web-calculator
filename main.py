@@ -63,6 +63,8 @@ def room():
     return render_template("room.html")
 
 
+
+
 @socketio.on("connect")
 def connect(auth):
     room = session.get("room")
