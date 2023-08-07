@@ -2,7 +2,7 @@
 {% block content%}
 
 <div class="message-box">
-    <h2>Chat Room: {{room}}</h2>
+    <h2>Chat Room: {{code}}</h2>
     <div class="messages" id="messages"></div>
     <div class="inputs">
 
@@ -54,7 +54,11 @@
         message.value = "";
 
     };
-
-
 </script>
+
+{% for msg in messages %}
+    <script type="text/javascript">
+        createMessage("{{msg.name}}", "{{msg.message}}");
+    </script>
+{% endfor %}
 {% endblock %}
